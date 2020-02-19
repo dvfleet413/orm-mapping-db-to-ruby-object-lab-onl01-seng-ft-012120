@@ -60,10 +60,10 @@ class Student
       WHERE grade = 10
       LIMIT 1
     SQL
+    binding.pry
     DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
-      binding.pry
-    end 
+    end
   end
     
 
